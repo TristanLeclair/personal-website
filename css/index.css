@@ -1,138 +1,147 @@
 html {
-    font-family: 'Work Sans', sans-serif;
-    -ms-overflow-style: none; /* for Internet Explorer, Edge */
-    scrollbar-width: none; /* for Firefox */
-    overflow-y: scroll;
-    overflow-x: hidden;
-    max-width: 100%;
-    width: 100vw;
-    scroll-behavior: smooth;
+  font-family: "Work Sans", sans-serif;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100vw;
+  scroll-behavior: smooth;
 }
 
 :root {
-    --accent1: rgb(78, 12, 201);
+  --accent1: rgb(78, 12, 201);
 
-    --text-light: black;
-    --bkg-light: white;
-    --accent1-light: rgb(78, 12, 201);
+  --text-light: black;
+  --bkg-light: white;
+  --accent1-light: rgb(78, 12, 201);
 
-    --text-dark: rgb(247, 236, 236);
-    --bkg-dark: #201F1F;
-    --accent1-dark: rgb(116, 54, 230);
+  --text-dark: rgb(247, 236, 236);
+  --bkg-dark: #201f1f;
+  --accent1-dark: rgb(116, 54, 230);
 }
 
-@media(prefers-color-scheme: dark) {
-    :root {
-        --text: var(--text-dark);
-        --bkg: var(--bkg-dark);
-        --accent1: var(--accent1-dark);
-    }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: var(--text-dark);
+    --bkg: var(--bkg-dark);
+    --accent1: var(--accent1-dark);
+  }
 }
 
-@media(prefers-color-scheme: light) {
-    :root {
-        --text: var(--text-light);
-        --bkg: var(--bkg-light);
-        --accent1: var(--accent1-light);
-    }
+@media (prefers-color-scheme: light) {
+  :root {
+    --text: var(--text-light);
+    --bkg: var(--bkg-light);
+    --accent1: var(--accent1-light);
+  }
 }
 
 [color-scheme="dark"] {
-    --text: var(--text-dark);
-    --bkg: var(--bkg-dark);
+  --text: var(--text-dark);
+  --bkg: var(--bkg-dark);
 }
 
 [color-scheme="light"] {
-    --text: var(--text-light);
-    --bkg: var(--bkg-light);
+  --text: var(--text-light);
+  --bkg: var(--bkg-light);
 }
 
 .theme {
-    background-color: var(--bkg);
-    width: 50px;
-    height: 50px;
-    border: 3px solid var(--bkg);
-    cursor: pointer;
-    display: grid;
-    place-items: center;
+  background-color: var(--bkg);
+  width: 50px;
+  height: 50px;
+  border: 3px solid var(--bkg);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
 }
 
 .dark-icon:hover .st0 {
-    fill: var(--accent1);
+  fill: var(--accent1);
 }
 
-
-
 body {
-    background-color: var(--bkg);
-    color: var(--text);
+  background-color: var(--bkg);
+  color: var(--text);
 }
 
 .hero-wrapper {
-    height: 100vh;
-    padding: 1em;
+  height: 50vh;
+  padding: 1em;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .right-header {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .header-nav {
-    display: flex;
-    list-style-type: none;
-    align-items: center;
-    justify-content: space-between;
-    flex-grow: 3;
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 3;
 }
 
 .home-link {
-    flex-grow: 1;
-    text-decoration: none;
-    color: var(--text);
-    width: 100px;
-    font-size: 1.5em;
+  flex-grow: 1;
+  text-decoration: none;
+  color: var(--text);
+  width: 100px;
+  font-size: 1.5em;
 }
 
 .home-link:hover {
-    color: var(--accent1);
+  color: var(--accent1);
 }
 
 .top-header {
-    text-decoration: none;
-    color:var(--text);
+  text-decoration: none;
+  color: var(--text);
 }
 
 .top-header:hover {
-    color: var(--accent1);
+  color: var(--accent1);
 }
 
 .hero {
-    padding-top: 5em;
+  padding-top: 5em;
 }
 
 .name {
-    font-size: 3.5rem;
-    margin: 0.5rem;
+  font-size: 3.5rem;
+  margin: 0.5rem;
 
-    background: -webkit-linear-gradient(right, rgb(78, 12, 201), var(--text)); /* Chrome10+, Safari5.1+ */
-    background: -moz-linear-gradient(right, rgb(78, 12, 201), var(--text));    /* FF3.6+ */
-    background: linear-gradient(to right, rgb(78, 12, 201), var(--text));      /* W3C */
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(
+    right,
+    rgb(78, 12, 201),
+    var(--text)
+  ); /* Chrome10+, Safari5.1+ */
+  background: -moz-linear-gradient(
+    right,
+    rgb(78, 12, 201),
+    var(--text)
+  ); /* FF3.6+ */
+  background: linear-gradient(
+    to right,
+    rgb(78, 12, 201),
+    var(--text)
+  ); /* W3C */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .Project-menu {
-    height: 100vh;
+  height: 50vh;
 }
 
 .section {
-    height: 100vh;
+  height: 50vh;
 }
-
