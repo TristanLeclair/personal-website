@@ -1,0 +1,85 @@
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.color-picker > fieldset {
+  border: 0;
+  display: flex;
+  gap: 2rem;
+  width: fit-content;
+  background: var(--surface0);
+  padding: 1rem 3rem;
+  margin-inline: auto;
+  border-radius: 1rem 0 1rem 1rem;
+}
+
+.color-picker input[type="radio"] {
+  appearance: none;
+  width: 1.1rem;
+  height: 1.1rem;
+  outline: 3px solid var(--radio-color, currentColor);
+  outline-offset: 3px;
+  border-radius: 50%;
+}
+
+.color-picker input[type="radio"]:checked {
+  background-color: var(--radio-color);
+}
+
+.color-picker input[type="radio"]#light {
+  --radio-color: var(--bkg-light);
+}
+
+.color-picker input[type="radio"]#dark {
+  --radio-color: var(--bkg-dark);
+}
+
+.light {
+  --bkg: var(--bkg-light);
+  --bkg-accent1: var(--bkg-accent1-light);
+  --bkg-accent2: var(--bkg-accent2-light);
+  --accent1: var(--accent1-light);
+  --text: var(--text-light);
+  --surface0: var(--surface0-light);
+  --surface1: var(--surface1-light);
+  --surface2: var(--surface2-light);
+}
+
+.dark {
+  --bkg: var(--bkg-dark);
+  --bkg-accent1: var(--bkg-accent1-dark);
+  --bkg-accent2: var(--bkg-accent2-dark);
+  --accent1: var(--accent1-dark);
+  --text: var(--text-dark);
+  --surface0: var(--surface0-dark);
+  --surface1: var(--surface1-dark);
+  --surface2: var(--surface2-dark);
+}
+
+:root:has(#light:checked) {
+  --bkg: var(--bkg-light);
+  --bkg-accent1: var(--bkg-accent1-light);
+  --bkg-accent2: var(--bkg-accent2-light);
+  --accent1: var(--accent1-light);
+  --text: var(--text-light);
+  --surface0: var(--surface0-light);
+  --surface1: var(--surface1-light);
+  --surface2: var(--surface2-light);
+}
+
+:root:has(#dark:checked) {
+  --bkg: var(--bkg-dark);
+  --bkg-accent1: var(--bkg-accent1-dark);
+  --bkg-accent2: var(--bkg-accent2-dark);
+  --accent1: var(--accent1-dark);
+  --text: var(--text-dark);
+  --surface0: var(--surface0-dark);
+  --surface1: var(--surface1-dark);
+  --surface2: var(--surface2-dark);
+}

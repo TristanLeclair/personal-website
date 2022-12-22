@@ -1,0 +1,30 @@
+@import url("https://unpkg.com/@catppuccin/palette@0.1.4/css/catppuccin.css");
+
+:root {
+  --bkg-dark: var(--ctp-mocha-base);
+  --bkg-accent1-dark: var(--ctp-mocha-crust);
+  --bkg-accent2-dark: var(--ctp-mocha-mantle);
+  --accent1-dark: var(--ctp-mocha-mauve);
+  --text-dark: var(--ctp-mocha-text);
+  --surface0-dark: var(--ctp-mocha-surface0);
+  --surface1-dark: var(--ctp-mocha-surface1);
+  --surface2-dark: var(--ctp-mocha-surface2);
+
+  --bkg-light: var(--ctp-latte-base);
+  --bkg-accent1-light: var(--ctp-latte-crust);
+  --bkg-accent2-light: var(--ctp-latte-mantle);
+  --accent1-light: var(--ctp-latte-mauve);
+  --text-light: var(--ctp-latte-text);
+  --surface0-light: var(--ctp-latte-surface0);
+  --surface1-light: var(--ctp-latte-surface1);
+  --surface2-light: var(--ctp-latte-surface2);
+
+  --bkg: var(--bkg-dark);
+  --bkg-accent1: var(--bkg-accent1-dark);
+  --bkg-accent2: var(--bkg-accent2-dark);
+  --accent1: var(--accent1-dark);
+  --text: var(--text-dark);
+  --surface0: var(--surface0-dark);
+  --surface1: var(--surface1-dark);
+  --surface2: var(--surface2-dark);
+}

@@ -1,59 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal-Website</title>
+    <link rel="shortcut icon" href="/icon/kindpng_3669804.png" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="/js/index.js" async></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Personal-Website</title>
-  <link rel="shortcut icon" href="/icon/kindpng_3669804.png" />
-  <link rel="stylesheet" href="css/index.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,700;1,400&display=swap"
-    rel="stylesheet" />
-  <script src="/js/index.js" async></script>
-</head>
-
-<body>
-  <div class="hero-wrapper">
+  <body>
     <header class="">
-      <a class="home-link" href="index.html">TLV</a>
+      <div style="width: 50%">
+        <a class="home-link" href="index.html">TLV</a>
+      </div>
 
       <nav class="right-header">
         <ul class="header-nav">
           <li><a class="top-header" href="#Projects">Projects</a></li>
           <li><a class="top-header" href="#Resume">Resume</a></li>
           <li><a class="top-header" href="#Contact">Contact</a></li>
-          <button class="theme" role="switch" aria-label="light/dark mode"></button>
+
+          <form class="color-picker" action="">
+            <fieldset>
+              <legend class="visually-hidden">Pick a color scheme</legend>
+
+              <label for="light" class="visually-hidden">Light</label>
+              <input type="radio" name="theme" id="light" />
+
+              <label for="dark" class="visually-hidden">Dark</label>
+              <input type="radio" name="theme" id="dark" checked />
+            </fieldset>
+          </form>
         </ul>
       </nav>
     </header>
+    <div class="hero-wrapper">
+      <section class="hero">
+        <p class="name">Tristan Leclair-Vani</p>
+        <hr />
+        <p>
+          I'm a third year student in computer science at McGill University
+          based in Montreal, Canada. I'm interested in game development and
+          design, along with music and AI.
+        </p>
 
-    <section class="hero">
-      <h3>Hi, I'm</h3>
-      <h1 class="name">Tristan Leclair-Vani</h1>
-      <hr />
-      <p>
-        I'm a third year student in computer science at McGill University
-        based in Montreal, Canada. I'm interested in game development and
-        design, along with music and AI.
-      </p>
-    </section>
-  </div>
+        <div class="test"></div>
+      </section>
+    </div>
 
-  <div class="section" id="Projects">
-    <h1>Projects</h1>
+    <div class="section" id="Projects">
+      <h1>Projects</h1>
 
-    <div></div>
-  </div>
+      <div></div>
+    </div>
 
-  <div class="section" id="Resume">
-    <h1>Resume</h1>
-  </div>
-  <div class="section" id="Contact">
-    <h1>Contact</h1>
-  </div>
-</body>
-
+    <div class="section" id="Resume">
+      <h1>Resume</h1>
+    </div>
+    <div class="section" id="Contact">
+      <h1>Contact</h1>
+    </div>
+  </body>
 </html>
