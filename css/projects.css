@@ -1,0 +1,65 @@
+.projects-container {
+  display: grid;
+  grid-template-columns: 50fr 50fr;
+  gap: 1em;
+}
+
+.project-container {
+  font-size: 0.8rem;
+  position: relative;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+  .projects-container {
+    grid-template-columns: 100fr;
+  }
+  .project-container {
+    width: 100%;
+  }
+}
+
+.project-container:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+  transform: scale(1.04);
+}
+
+@media only screen and (max-width: 600px) {
+  .project-container:hover {
+    transform: scale(1.02);
+  }
+}
+
+@media (hover: none) {
+  .project-overlay {
+    padding: 1em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    max-height: 50%;
+    background-color: rgba(var(--bkg-triplet), 0.9);
+  }
+}
+
+@media (hover: hover) {
+  .project-overlay {
+    padding: 1em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition-property: max-height, background-color;
+    transition-duration: 0.7s;
+    transition-timing-function: ease-in-out;
+  }
+
+  .project-container:hover > .project-overlay {
+    max-height: 50%;
+    background-color: rgba(var(--bkg-triplet), 0.9);
+  }
+}

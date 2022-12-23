@@ -48,6 +48,7 @@
 
 .light {
   --bkg: var(--bkg-light);
+  --bkg-triplet: var(--bkg-light-triplet);
   --bkg-accent1: var(--bkg-accent1-light);
   --bkg-accent2: var(--bkg-accent2-light);
   --accent1: var(--accent1-light);
@@ -59,6 +60,7 @@
 
 .dark {
   --bkg: var(--bkg-dark);
+  --bkg-triplet: var(--bkg-dark-triplet);
   --bkg-accent1: var(--bkg-accent1-dark);
   --bkg-accent2: var(--bkg-accent2-dark);
   --accent1: var(--accent1-dark);
@@ -70,6 +72,7 @@
 
 :root:has(#light:checked) {
   --bkg: var(--bkg-light);
+  --bkg-triplet: var(--bkg-light-triplet);
   --bkg-accent1: var(--bkg-accent1-light);
   --bkg-accent2: var(--bkg-accent2-light);
   --accent1: var(--accent1-light);
@@ -81,6 +84,7 @@
 
 :root:has(#dark:checked) {
   --bkg: var(--bkg-dark);
+  --bkg-triplet: var(--bkg-dark-triplet);
   --bkg-accent1: var(--bkg-accent1-dark);
   --bkg-accent2: var(--bkg-accent2-dark);
   --accent1: var(--accent1-dark);

@@ -28,15 +28,28 @@ body {
   line-height: 1.6;
 }
 
+@media only screen and (max-width: 900px) {
+  body {
+    font-size: 1.1rem;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   body {
     font-size: 1rem;
   }
   .name {
-    font-size: 3rem;
+    font-size: 4rem;
     color: blue;
   }
 }
+
+@media only screen and (max-width: 450px) {
+  body {
+    font-size: 0.7rem;
+  }
+}
+
 
 body,
 h1,
@@ -151,11 +164,11 @@ a {
   }
 }
 
-.Project-menu {
-  height: 50vh;
+.section-body {
+  min-height: 50vh;
 }
 
-.section {
+.Project-menu {
   height: 50vh;
 }
 
