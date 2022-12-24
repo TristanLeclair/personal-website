@@ -1,6 +1,10 @@
 @import "theme.css";
 @import "themePicker.css";
 
+:root {
+  font-size: 1.1rem;
+}
+
 *,
 *::before,
 *::after {
@@ -28,6 +32,29 @@ body {
   line-height: 1.6;
 }
 
+i {
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 900px) {
+  :root {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  :root {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  :root {
+    font-size: 0.7rem;
+  }
+}
+
+
 body,
 h1,
 h2,
@@ -43,6 +70,9 @@ img {
 
 .container {
   width: min(90%, 70.5rem);
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }
 
 header {
@@ -51,11 +81,6 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: var(--bkg-accent1);
-}
-
-.hero-wrapper {
-  height: 50vh;
-  padding: 1em;
 }
 
 .right-header {
@@ -96,8 +121,24 @@ a {
   color: var(--accent1);
 }
 
+.hero-wrapper {
+  height: 50vh;
+}
+
 .hero {
-  padding-top: 5em;
+  padding-top: 3em;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    margin-bottom: 2em;
+  }
+  .hero-wrapper {
+    height: inherit;
+  }
+  .hero {
+    padding-top: 0;
+  }
 }
 
 .name {
@@ -120,11 +161,24 @@ a {
   -webkit-text-fill-color: transparent;
 }
 
-.Project-menu {
-  height: 50vh;
+@media only screen and (max-width: 900px) {
+  .name {
+    font-size: 3rem;
+  }
 }
 
-.section {
+@media only screen and (max-width: 600px) {
+  .name {
+    font-size: 2rem;
+    color: blue;
+  }
+}
+
+.section-body {
+  min-height: 50vh;
+}
+
+.Project-menu {
   height: 50vh;
 }
 
