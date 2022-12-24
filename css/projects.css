@@ -42,10 +42,11 @@
 
 .project-overlay {
   display: flex;
+  justify-content: space-around;
 }
 
-.project-overlay a {
-  text-decoration: none;
+.project-info {
+  flex-basis: 1;
 }
 
 /* overlay for phones and tablets (systems that can't hover) */
@@ -83,10 +84,36 @@
     background-color: rgba(var(--bkg-triplet), 0.9);
     color: var(--text);
   }
+
+  .project-links svg {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.7s;
+    transition-timing-function: ease-in-out;
+
+  }
+  .project-container:hover .project-links svg {
+    opacity: 100%;
+  }
+}
+
+.project-techs {
+  display: flex;
+  align-items: center;
+}
+
+.project-techs svg {
+  width: 1.2rem;
+  height: auto;
 }
 
 .project-links {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+}
+
+.project-keywords {
+  font-family: monospace;
+  color: var(--accent1)
 }
