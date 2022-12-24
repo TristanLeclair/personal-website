@@ -29,7 +29,7 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   .projects-container {
     grid-template-columns: 100fr;
   }
@@ -57,7 +57,7 @@
 }
 
 /* overlay for phones and tablets (systems that can't hover) */
-@media (hover: none) {
+@media only screen and (max-width: 600px) {
   .project-overlay {
     padding: 1em;
     position: absolute;
@@ -71,7 +71,7 @@
 }
 
 /* overlay for systems that can hover) */
-@media (hover: hover) {
+@media only screen and (min-width: 599px) {
   .project-overlay {
     padding: 1em;
     position: absolute;
