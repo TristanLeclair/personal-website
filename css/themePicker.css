@@ -11,12 +11,18 @@
 .color-picker > fieldset {
   border: 0;
   display: flex;
-  gap: 2rem;
+  gap: 2em;
   width: fit-content;
   background: var(--surface0);
-  padding: 1rem 3rem;
+  padding: 1em 3em;
   margin-inline: auto;
-  border-radius: 1rem 0 1rem 1rem;
+  border-radius: 1em 0 1em 1em;
+}
+
+@media only screen and (max-width: 600px) {
+  .color-picker > fieldset {
+    padding: 1em 2.2em;
+  }
 }
 
 .color-picker input[type="radio"] {
@@ -42,6 +48,7 @@
 
 .light {
   --bkg: var(--bkg-light);
+  --bkg-triplet: var(--bkg-light-triplet);
   --bkg-accent1: var(--bkg-accent1-light);
   --bkg-accent2: var(--bkg-accent2-light);
   --accent1: var(--accent1-light);
@@ -53,6 +60,7 @@
 
 .dark {
   --bkg: var(--bkg-dark);
+  --bkg-triplet: var(--bkg-dark-triplet);
   --bkg-accent1: var(--bkg-accent1-dark);
   --bkg-accent2: var(--bkg-accent2-dark);
   --accent1: var(--accent1-dark);
@@ -64,6 +72,7 @@
 
 :root:has(#light:checked) {
   --bkg: var(--bkg-light);
+  --bkg-triplet: var(--bkg-light-triplet);
   --bkg-accent1: var(--bkg-accent1-light);
   --bkg-accent2: var(--bkg-accent2-light);
   --accent1: var(--accent1-light);
@@ -75,6 +84,7 @@
 
 :root:has(#dark:checked) {
   --bkg: var(--bkg-dark);
+  --bkg-triplet: var(--bkg-dark-triplet);
   --bkg-accent1: var(--bkg-accent1-dark);
   --bkg-accent2: var(--bkg-accent2-dark);
   --accent1: var(--accent1-dark);
