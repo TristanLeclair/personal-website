@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="/icon/kindpng_3669804.png" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/projects.css" />
+    <link rel="stylesheet" href="css/resume.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -61,7 +62,7 @@
 
         <div class="section-body" id="Projects">
           <h2>Projects</h2>
-          <div class="projects-container">
+          <div class="responsive-grid">
             <div class="project-container">
               <img src="img/boid_animation.gif" alt="Boid flocking animation" />
               <div class="project-overlay">
@@ -157,13 +158,18 @@
               </div>
             </div>
             <div class="project-container">
-              <img src="img/splendor_screenshot.png" alt="Splendor Game Board" />
+              <img
+                src="img/splendor_screenshot.png"
+                alt="Splendor Game Board"
+              />
               <div class="project-overlay">
                 <div class="project-info">
                   <h3>Splendor Game</h3>
-                  <p>Multiplayer board game made as a team with FXGL and Javafx</p>
+                  <p>
+                    Multiplayer board game made as a team with FXGL and Javafx
+                  </p>
                   <p class="project-keywords">
-                    | Java | JavaFX | Docker | JUnit | MVC | Server |
+                    | Java | JavaFX | Docker | JUnit | MVC |
                   </p>
                 </div>
                 <div class="project-techs">
@@ -182,10 +188,7 @@
                 </div>
                 <div class="project-links">
                   <!-- TODO: Add link to Splendor if prof says it's okay -->
-                  <a
-                    href="#"
-                    class="project-link"
-                  >
+                  <a href="#" class="project-link">
                     <svg width="32" height="32" viewBox="0 0 24 24">
                       <path
                         fill="currentColor"
@@ -254,18 +257,68 @@
           <!-- <p>A variety of projects created with the P5.js library</p> -->
         </div>
         <hr />
-
-        <div class="section-body">
-          <section id="Resume">
-            <h2>Resume</h2>
-          </section>
-        </div>
-        <div class="section-body">
-          <section id="Contact">
-            <h2>Contact</h2>
-          </section>
-        </div>
       </div>
     </main>
+    <footer>
+      <div class="container row">
+        <div class="column">
+          <h2>Resume</h2>
+          <div class="responsive-grid resume-btns">
+            <span class="tooltip">Google Docs</span>
+            <a
+              href="https://docs.google.com/document/d/1WMNq0O2ZWJANbXDxpuoX5WgpxpyYWNu6rgMyOgJwLfs/edit?usp=sharing"
+            >
+              <button class="cv-button">FR</button>
+            </a>
+            <a
+              href="https://docs.google.com/document/d/1ZI1EaY0bFSpzqmyn76AvJWY2hqyZnSGg8esRDJJeEmE/edit?usp=sharing"
+            >
+              <button class="cv-button">EN</button>
+            </a>
+          </div>
+        </div>
+        <div class="column">
+          <h2>Contact</h2>
+          <ul class="wrapper">
+            <a href="http://www.linkedin.com/in/tristan-leclair-vani">
+              <li class="icon linkedin">
+                <span class="tooltip">LinkedIn</span>
+                <span>
+                  <svg width="32" height="32" viewBox="0 0 24 24">
+                    <path
+                      d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z"
+                    />
+                  </svg>
+                </span>
+              </li>
+            </a>
+            <a href="https://github.com/TristanLeclair">
+              <li class="icon github">
+                <span class="tooltip">Github</span>
+                <span>
+                  <svg width="32" height="32" viewBox="0 0 24 24">
+                    <path
+                      d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4.44c-.32-.07-.33-.68-.33-.89l.01-2.47c0-.84-.29-1.39-.61-1.67c2.01-.22 4.11-.97 4.11-4.44c0-.98-.35-1.79-.92-2.42c.09-.22.4-1.14-.09-2.38c0 0-.76-.23-2.48.93c-.72-.2-1.48-.3-2.25-.31c-.76.01-1.54.11-2.25.31c-1.72-1.16-2.48-.93-2.48-.93c-.49 1.24-.18 2.16-.09 2.38c-.57.63-.92 1.44-.92 2.42c0 3.47 2.1 4.22 4.1 4.47c-.26.2-.49.6-.57 1.18c-.52.23-1.82.63-2.62-.75c0 0-.48-.86-1.38-.93c0 0-.88 0-.06.55c0 0 .59.28 1 1.32c0 0 .52 1.75 3.03 1.21l.01 1.53c0 .21-.02.82-.34.89H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"
+                    />
+                  </svg>
+                </span>
+              </li>
+            </a>
+            <a href="mailto: tristan.leclair42@gmail.com">
+              <li class="icon mail">
+                <span class="tooltip">Email</span>
+                <span>
+                  <svg width="32" height="32" viewBox="0 0 24 24">
+                    <path
+                      d="m20 8l-8 5l-8-5V6l8 5l8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"
+                    />
+                  </svg>
+                </span>
+              </li>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

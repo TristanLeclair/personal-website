@@ -36,6 +36,12 @@ i {
   font-size: 2rem;
 }
 
+@media only screen and (max-width: 1200px) {
+  :root {
+    font-size: 1rem;
+  }
+}
+
 @media only screen and (max-width: 900px) {
   :root {
     font-size: 1.1rem;
@@ -54,7 +60,6 @@ i {
   }
 }
 
-
 body,
 h1,
 h2,
@@ -68,11 +73,40 @@ img {
   max-width: 100%;
 }
 
+footer {
+  height: 35vh;
+}
+
 .container {
   width: min(90%, 70.5rem);
   align-items: center;
   justify-content: center;
   margin: auto;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.responsive-grid {
+  display: grid;
+  grid-template-columns: 50fr 50fr;
+  gap: 1em;
+}
+@media only screen and (max-width: 900px) {
+  .responsive-grid {
+    grid-template-columns: 100fr;
+  }
 }
 
 header {
@@ -172,14 +206,6 @@ a {
     font-size: 2rem;
     color: blue;
   }
-}
-
-.section-body {
-  min-height: 50vh;
-}
-
-.Project-menu {
-  height: 50vh;
 }
 
 .test {

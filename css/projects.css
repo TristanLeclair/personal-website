@@ -1,9 +1,3 @@
-.projects-container {
-  display: grid;
-  grid-template-columns: 50fr 50fr;
-  gap: 1em;
-}
-
 .project-container {
   font-size: 0.9rem;
   position: relative;
@@ -23,6 +17,12 @@
   position: relative;
 }
 
+@media only screen and (max-width: 1200px) {
+  .project-container {
+    font-size: 0.7rem;
+  }
+}
+
 @media only screen and (max-width: 900px) {
   .project-container {
     font-size: 0.7rem;
@@ -30,9 +30,6 @@
 }
 
 @media only screen and (max-width: 900px) {
-  .projects-container {
-    grid-template-columns: 100fr;
-  }
   .project-container {
     width: 100%;
   }
