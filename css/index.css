@@ -108,6 +108,11 @@ footer {
     grid-template-columns: 100fr;
   }
 }
+@media only screen and (max-height: 400px) {
+  .responsive-grid {
+    grid-template-columns: 50fr 50fr;
+  }
+}
 
 header {
   padding: 1em;
@@ -157,6 +162,11 @@ a {
 
 .hero-wrapper {
   height: 40vh;
+}
+@media only screen and (max-height: 500px) {
+  .hero-wrapper {
+    height: 100vh;
+  }
 }
 
 .hero {
