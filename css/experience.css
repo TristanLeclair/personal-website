@@ -1,0 +1,62 @@
+/* Your styles for the work experience section */
+.work-entry {
+  font-size: 1em;
+}
+
+.work-entry h3 {
+  font-size: 1.2em;
+  color: var(--accent1);
+}
+
+.work-experience {
+  margin-bottom: 20px;
+}
+
+.work-entry {
+  /* Your styles for each work entry */
+  margin-bottom: 10px;
+}
+
+.work-date {
+  /* Your styles for the date */
+  font-style: italic;
+  font-size: 0.9em;
+  color: var(--accent2);
+}
+
+.work-position {
+  /* Your styles for the position */
+  font-weight: bold;
+}
+
+.work-description {
+  /* Your styles for the description */
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+
+.work-description ul {
+  display: block;
+  margin-left: -10px;
+}
+
+.work-description li {
+  display: block;
+  position: relative;
+}
+
+.work-description li:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.work-description li:before {
+  content: "";
+  position: absolute;
+  top: 1.3em;
+  left: -1em;
+  margin-top: -0.8em;
+  background: linear-gradient(to right, var(--accent1), var(--text));
+  height: 0.5em;
+  width: 0.5em;
+  border-radius: 50%;
+}
