@@ -161,7 +161,7 @@ a {
 }
 
 .hero-wrapper {
-  height: 40vh;
+  min-height: 40vh;
 }
 @media only screen and (max-height: 500px) {
   .hero-wrapper {
