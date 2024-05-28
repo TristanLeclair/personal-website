@@ -6,10 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal-Website</title>
     <!-- Need to change the sourcing for Github pages -->
-    <link
-      rel="shortcut icon"
-      href="/personal-website/icon/kindpng_3669804.png"
-    />
+    <link rel="shortcut icon" href="icon/kindpng_3669804.png" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/projects.css" />
     <link rel="stylesheet" href="css/resume.css" />
@@ -20,8 +17,16 @@
       href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Load i18next and plugins -->
+    <script src="https://unpkg.com/i18next@21.6.12/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.0/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="https://unpkg.com/jquery-i18next@1.3.5/jquery-i18next.min.js"></script>
+
+    <base href="/" id="base-tag" />
+
     <!-- Need to change the sourcing for Github pages -->
-    <script src="/personal-website/js/index.js" async></script>
+    <script src="js/index.js" async></script>
   </head>
 
   <body>
@@ -37,6 +42,15 @@
           <!-- <li><a class="top-header" href="#Contact">Contact</a></li> -->
         </ul>
       </nav>
+
+      <div id="language-toggle" class="toggle-container">
+        <input type="checkbox" id="language-switch" class="toggle-input" />
+        <label for="language-switch" class="toggle-label">
+          <span class="toggle-label-text" id="toggle-label-en">EN</span>
+          <span class="toggle-label-text" id="toggle-label-fr">FR</span>
+        </label>
+      </div>
+
       <form class="color-picker" action="">
         <fieldset>
           <legend class="visually-hidden">Pick a color scheme</legend>
@@ -54,16 +68,16 @@
       <div class="container">
         <div class="hero-wrapper">
           <section class="hero">
-            <p class="name">Tristan Leclair-Vani</p>
+            <p class="name" data-i18n="name">Tristan Leclair-Vani</p>
             <hr />
-            <p>
+            <p data-i18n="intro">
               I'm a recent Bachelor's Graduate from McGill University who's been
               active in development and technology for over 6+ years (DCS and
               Bachelor's), based in Montreal, Canada. I'm interested in data
               science, back-end development and networking along with psychology
               and cognition.
             </p>
-            <p>
+            <p data-i18n="current_status">
               I've completed 3 internships in front and back end development and
               have been a hobbyist for a long time. I'm currently looking for a
               full time job in either back-end or data science starting as soon
@@ -77,25 +91,29 @@
 
         <div class="section-body">
           <section class="work-experience">
-            <h2>Work Experience</h2>
+            <h2 data-i18n="work_experience">Work Experience</h2>
 
             <div class="work-entry">
-              <h3>Flo EV</h3>
-              <p class="work-date">May 2023 - August 2023</p>
-              <p class="work-position">
+              <h3 data-i18n="flo_ev_title">Flo EV</h3>
+              <p class="work-date" data-i18n="flo_ev_date">
+                May 2023 - August 2023
+              </p>
+              <p class="work-position" data-i18n="flo_ev_position">
                 Dotnet back-end software designer intern
               </p>
               <ul class="work-description">
-                <li>Worked in their "Cloud Modernization" team</li>
-                <li>
+                <li data-i18n="flo_ev_desc1">
+                  Worked in their "Cloud Modernization" team
+                </li>
+                <li data-i18n="flo_ev_desc2">
                   Migrated services from their old OCPI Dotnet monolith to
                   azure-hosted micro-services
                 </li>
-                <li>
+                <li data-i18n="flo_ev_desc3">
                   Worked with SQL databases, containerized services deployed in
                   clusters on Azure
                 </li>
-                <li>
+                <li data-i18n="flo_ev_desc4">
                   Worked on deployments and testing their OCPI APIs with
                   automated unit and integration testing
                 </li>
@@ -103,16 +121,22 @@
             </div>
 
             <div class="work-entry">
-              <h3>Alithya</h3>
-              <p class="work-date">May 2022 - August 2022</p>
-              <p class="work-position">Web developer intern</p>
+              <h3 data-i18n="alithya_title">Alithya</h3>
+              <p class="work-date" data-i18n="alithya_date">
+                May 2022 - August 2022
+              </p>
+              <p class="work-position" data-i18n="alithya_position">
+                Web developer intern
+              </p>
               <ul class="work-description">
-                <li>Worked for their Alithya Academy team</li>
-                <li>
+                <li data-i18n="alithya_desc1">
+                  Worked for their Alithya Academy team
+                </li>
+                <li data-i18n="alithya_desc2">
                   Worked on multiple Typescript React projects with Material UI
                   and Storybook
                 </li>
-                <li>
+                <li data-i18n="alithya_desc3">
                   Helped create a front-end curriculum for new front-end
                   developers
                 </li>
@@ -124,18 +148,18 @@
         </div>
 
         <div class="section-body" id="Projects">
-          <h2>Projects</h2>
+          <h2 data-i18n="projects">Projects</h2>
           <div class="responsive-grid">
             <div class="project-container">
               <img src="img/kotfm_report.PNG" alt="Top page of final report" />
               <div class="project-overlay">
                 <div class="project-info">
-                  <h3>Media Coverage Analysis</h3>
-                  <p>
+                  <h3 data-i18n="project1_title">Media Coverage Analysis</h3>
+                  <p data-i18n="project1_desc">
                     A data science project examining the media coverage of the
                     movie Killers of the Flower Moon.
                   </p>
-                  <p class="project-keywords">
+                  <p class="project-keywords" data-i18n="project1_keywords">
                     | python | pandas | human-coding |
                   </p>
                 </div>
@@ -159,12 +183,14 @@
               <img src="img/path_game.gif" alt="Pathfinding in action" />
               <div class="project-overlay">
                 <div class="project-info">
-                  <h3>A* Pathfinding</h3>
-                  <p>
+                  <h3 data-i18n="project2_title">A* Pathfinding</h3>
+                  <p data-i18n="project2_desc">
                     A unity project to learn about pathfinding algorithms and
                     performance testing.
                   </p>
-                  <p class="project-keywords">| C# | python | pathfinding |</p>
+                  <p class="project-keywords" data-i18n="project2_keywords">
+                    | C# | python | pathfinding |
+                  </p>
                 </div>
                 <div class="project-techs">
                   <svg width="32" height="32" viewBox="0 0 24 24">
@@ -202,11 +228,11 @@
               />
               <div class="project-overlay">
                 <div class="project-info">
-                  <h3>Splendor Game</h3>
-                  <p>
+                  <h3 data-i18n="project3_title">Splendor Game</h3>
+                  <p data-i18n="project3_desc">
                     Multiplayer board game made as a team with FXGL and Javafx
                   </p>
-                  <p class="project-keywords">
+                  <p class="project-keywords" data-i18n="project3_keywords">
                     | JavaFX | Docker | JUnit | MVC |
                   </p>
                 </div>
@@ -246,11 +272,13 @@
               />
               <div class="project-overlay">
                 <div class="project-info">
-                  <h3>Dave's Dangerous Dungeons</h3>
-                  <p>
+                  <h3 data-i18n="project4_title">Dave's Dangerous Dungeons</h3>
+                  <p data-i18n="project4_desc">
                     Game made as a team in Unity for a final project in Cegep
                   </p>
-                  <p class="project-keywords">| Unity | C# |</p>
+                  <p class="project-keywords" data-i18n="project4_keywords">
+                    | Unity | C# |
+                  </p>
                 </div>
                 <div class="project-techs">
                   <svg width="32" height="32" viewBox="0 0 24 24">
@@ -285,12 +313,14 @@
               <img src="img/boid_animation.gif" alt="Boid flocking animation" />
               <div class="project-overlay">
                 <div class="project-info">
-                  <h3>P5.js Projects</h3>
-                  <p>
+                  <h3 data-i18n="project5_title">P5.js Projects</h3>
+                  <p data-i18n="project5_desc">
                     Projects made in P5.js to learn Javascript and basic
                     animation.
                   </p>
-                  <p class="project-keywords">| javascript | animation |</p>
+                  <p class="project-keywords" data-i18n="project5_keywords">
+                    | javascript | animation |
+                  </p>
                 </div>
                 <div class="project-techs">
                   <svg width="32" height="32" viewBox="0 0 24 24">
@@ -331,12 +361,12 @@
               <img src="img/website_image.png" alt="Personal website" />
               <div class="project-overlay">
                 <div class="project-info">
-                  <h3>Personal Website</h3>
-                  <p>
+                  <h3 data-i18n="project6_title">Personal Website</h3>
+                  <p data-i18n="project6_desc">
                     Personal website project to show off current and future
                     projects.
                   </p>
-                  <p class="project-keywords">
+                  <p class="project-keywords" data-i18n="project6_keywords">
                     | html | css | responsive design |
                   </p>
                 </div>
@@ -394,7 +424,7 @@
     <footer>
       <div class="container row">
         <div class="column">
-          <h2>Resume</h2>
+          <h2 data-i18n="resume">Resume</h2>
           <div class="responsive-grid resume-btns">
             <span class="tooltip">Download my CV</span>
             <a href="./resources/cv/CV Mai 2024 (FR).pdf">
@@ -407,7 +437,7 @@
         </div>
         <div class="column">
           <div class="wrapper">
-            <h2 id="Contact">Contact Me</h2>
+            <h2 data-i18n="contact_me" id="Contact">Contact Me</h2>
           </div>
           <ul class="wrapper">
             <a href="http://www.linkedin.com/in/tristan-leclair-vani">

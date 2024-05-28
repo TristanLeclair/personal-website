@@ -222,3 +222,63 @@ a {
   background-color: var(--bkg-accent1);
   height: 12px;
 }
+
+/* index.css */
+
+/* Language Toggle Styles */
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  margin-right: 1em; /* Adding bottom margin to separate it from the color picker */
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: var(--surface0);
+  border: 0.1em solid var(--text); /* Changed to em */
+  border-radius: 1.8em; /* Changed to em */
+  overflow: hidden;
+  position: relative;
+  width: 4.1em; /* Changed to em */
+  height: 2.2em; /* Changed to em */
+}
+
+.toggle-label-text {
+  font-size: 1.1rem; /* Adjusted font size */
+  padding: 0 1em; /* Changed to em */
+  color: var(--text);
+  user-select: none;
+}
+
+#toggle-label-en {
+  background-color: var(--accent1);
+  color: var(--bkg);
+  border-radius: 2em; /* Changed to em */
+  padding: 0.5em; /* Changed to em */
+  transition: all 0.3s ease;
+}
+
+#language-switch:checked + .toggle-label #toggle-label-en {
+  background-color: transparent;
+  color: var(--text);
+}
+
+#toggle-label-fr {
+  position: absolute;
+  right: 0;
+  background-color: transparent;
+  padding: 0.5em; /* Changed to em */
+  transition: all 0.3s ease;
+}
+
+#language-switch:checked + .toggle-label #toggle-label-fr {
+  background-color: var(--accent1);
+  color: var(--bkg);
+  border-radius: 2em; /* Changed to em */
+}

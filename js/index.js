@@ -25,4 +25,56 @@ colorThemes.forEach((themeOption) => {
   });
 });
 
-document.onload = setTheme();
+// index.js
+
+document.addEventListener("DOMContentLoaded", function () {
+  const isGitHubPages =
+    window.location.hostname !== "127.0.0.1" &&
+    window.location.hostname !== "localhost";
+  const baseTag = document.getElementById("base-tag");
+  if (isGitHubPages) {
+    baseTag.setAttribute("href", "/personal-website/");
+  }
+
+  const basePath = baseTag.getAttribute("href");
+
+  fetch(`${basePath}translations/translations.json`)
+    .then((response) => response.json())
+    .then((resources) => {
+      i18next.use(i18nextBrowserLanguageDetector).init(
+        {
+          resources,
+          fallbackLng: "en",
+          debug: true,
+          detection: {
+            order: [
+              "querystring",
+              "cookie",
+              "localStorage",
+              "navigator",
+              "htmlTag",
+              "path",
+              "subdomain",
+            ],
+            caches: ["localStorage", "cookie"],
+          },
+        },
+        function (err, t) {
+          updateContent();
+        },
+      );
+
+      function updateContent() {
+        document.querySelectorAll("[data-i18n]").forEach(function (element) {
+          element.innerHTML = i18next.t(element.getAttribute("data-i18n"));
+        });
+      }
+
+      document
+        .getElementById("language-switch")
+        .addEventListener("change", function () {
+          const language = this.checked ? "fr" : "en";
+          i18next.changeLanguage(language, updateContent);
+        });
+    });
+});
