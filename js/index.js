@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     baseTag.setAttribute("href", "/personal-website/");
   }
 
-  const basePath = baseTag.getAttribute("href");
+  const basePath = isGitHubPages ? "/personal-website/" : "/";
 
   fetch(`${basePath}translations/translations.json`)
     .then((response) => response.json())
