@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal-Website</title>
+
     <!-- Need to change the sourcing for Github pages -->
     <link rel="shortcut icon" href="icon/kindpng_3669804.png" />
     <link rel="stylesheet" href="css/index.css" />
@@ -25,8 +26,24 @@
 
     <base href="/" id="base-tag" />
 
+    <!-- Dynamic script loading based on environment -->
+    <script>
+      const isGitHubPages =
+        window.location.hostname !== "127.0.0.1" &&
+        window.location.hostname !== "localhost";
+      const baseTag = document.getElementById("base-tag");
+      if (isGitHubPages) {
+        baseTag.setAttribute("href", "/personal-website/");
+      }
+      const basePath = baseTag.getAttribute("href");
+      const script = document.createElement("script");
+      script.src = `${basePath}js/index.js`;
+      script.async = true;
+      document.head.appendChild(script);
+    </script>
+
     <!-- Need to change the sourcing for Github pages -->
-    <script src="/personal-website/js/index.js" async></script>
+    <!-- <script src="js/index.js" async></script> -->
   </head>
 
   <body>
