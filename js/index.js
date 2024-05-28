@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.hostname !== "localhost";
   const baseTag = document.getElementById("base-tag");
   if (isGitHubPages) {
-    baseTag.setAttribute("href", "/personal-website/");
+    // baseTag.setAttribute("href", "/personal-website/");
   }
 
   const basePath = isGitHubPages ? "/personal-website/" : "/";
