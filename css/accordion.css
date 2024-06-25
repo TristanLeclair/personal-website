@@ -1,0 +1,100 @@
+@import url("https://unpkg.com/@catppuccin/palette@0.1.4/css/catppuccin.css");
+
+/* Integrated styles for the accordion */
+.accordion {
+  border: 1px solid var(--surface1);
+  border-radius: 5px;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.accordion-item {
+  border-bottom: 1px solid var(--surface2);
+}
+
+.accordion-button {
+  background: var(--surface0);
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 0.7em;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: var(--text);
+  transition: background-color 0.3s ease;
+}
+
+.accordion-button:hover {
+  background: var(--surface1);
+}
+
+.accordion-button:focus {
+  outline: none;
+}
+
+.accordion-content {
+  display: none;
+  padding: 0 15px;
+  background: var(--bkg);
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.accordion-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.accordion-content ul li {
+  margin: 10px 0;
+}
+
+.accordion-content ul li a {
+  text-decoration: none;
+  color: var(--accent1);
+  transition: color 0.3s ease;
+}
+
+.accordion-content ul li a:hover {
+  text-decoration: underline;
+  color: var(--accent2);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
+
+.tag {
+  background-color: var(--surface1);
+  color: var(--text);
+  border-radius: 3px;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.tag.in-progress {
+  background-color: var(--ctp-latte-yellow);
+  color: var(--bkg);
+}
+
+.tag.tech {
+  background-color: var(--ctp-latte-blue);
+  color: var(--bkg);
+}
+
+.tag.subject {
+  background-color: var(--ctp-latte-green);
+  color: var(--bkg);
+}
+
+.tag:hover {
+  background-color: var(--accent1);
+  color: var(--bkg);
+}

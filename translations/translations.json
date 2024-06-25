@@ -40,12 +40,19 @@
       "project7_title": "Zero Configuration Network",
       "project7_desc": "A library to run zero configuration services with multicasting across a network",
       "project7_keywords": "| C | Docker | Makefile | Unix scripting |",
+      "full_projects": "Full List of Projects",
+      "java_projects": "Java",
+      "python_projects": "Python",
+      "csharp_projects": "C#",
+      "config_projects": "Configs",
+      "misc_projects": "Miscellaneous",
       "resume": "Resume",
       "google_docs": "Google Docs",
       "contact_me": "Contact Me",
       "linkedin": "LinkedIn",
       "github": "Github",
-      "email": "Email"
+      "email": "Email",
+      "in_progress": "In Progress"
     }
   },
   "fr": {
@@ -89,12 +96,19 @@
       "project7_title": "Zero Configuration Network",
       "project7_desc": "Une bibliothèque pour exécuter des services sans configuration avec multidiffusion sur un réseau",
       "project7_keywords": "| C | Docker | Makefile | Scripting Unix |",
+      "full_projects": "Liste Complète de Projets",
+      "java_projects": "Java",
+      "python_projects": "Python",
+      "csharp_projects": "C#",
+      "config_projects": "Configs",
+      "misc_projects": "Divers",
       "resume": "CV",
       "google_docs": "Google Docs",
       "contact_me": "Contactez-moi",
       "linkedin": "LinkedIn",
       "github": "Github",
-      "email": "Email"
+      "email": "Email",
+      "in_progress": "En cours"
     }
   }
 }
